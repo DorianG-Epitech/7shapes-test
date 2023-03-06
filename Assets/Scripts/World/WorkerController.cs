@@ -27,7 +27,7 @@ public class WorkerController : MonoBehaviour
 
     public delegate void OnPathChangedDelegate();
     public OnPathChangedDelegate OnPathChanged;
-    public int Stock => m_stock;
+    public int Stock => m_stock; 
     public bool Started => m_started;
 
     public Transform Target

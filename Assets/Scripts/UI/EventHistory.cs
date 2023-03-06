@@ -22,6 +22,7 @@ public class EventHistory : MonoBehaviour
 {
     public static EventHistory instance;
 
+    [SerializeField] WorkerController m_worker;
     [SerializeField] Transform m_container;
     [SerializeField] Button m_buttonPrefab;
 
@@ -49,6 +50,11 @@ public class EventHistory : MonoBehaviour
                 Destroy(m_events[i]);
                 m_events.RemoveAt(i);
                 m_relocationEvents.RemoveAt(i);
+            }
+            if (m_worker.Started)
+            {
+                m_worker.RecomputePath();
+                m_worker.GoToTarget();
             }
         });
         m_relocationEvents.Add(new RelocationEvent(element, oldPosition, oldRotation));

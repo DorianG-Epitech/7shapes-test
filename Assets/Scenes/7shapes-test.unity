@@ -203,7 +203,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 818627566}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.998661
+  m_Size: 0.8452555
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1023,7 +1023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035156, y: -0.00024414062}
+  m_AnchoredPosition: {x: 0.000061035156, y: 80.18142}
   m_SizeDelta: {x: 232, y: 1042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &718569998
@@ -1638,6 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffe5433b5ad58d43bd3dfa7bc5b310f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_worker: {fileID: 208760791}
   m_container: {fileID: 718569997}
   m_buttonPrefab: {fileID: 6031440229164891241, guid: ffed8ae7387ae5a4595f013b459b9acb,
     type: 3}
