@@ -2,6 +2,7 @@
 
 Voici mon test technique pour le poste de développeur stagiaire Unity pour l'entreprise 7Shapes. Celui-ci consistait à ajouter des nouvelles fonctionnalités dans un projet pré-existant.
 
+Voici le lien Itch.io: https://doriangms.itch.io/7shapes-test
 
 ## Première fonctionnalité: Déplacements des postes
 
