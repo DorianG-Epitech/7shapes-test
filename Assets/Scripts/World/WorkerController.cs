@@ -20,9 +20,11 @@ public class WorkerController : MonoBehaviour
     [SerializeField] NavMeshPath m_path;
     [SerializeField] int m_currentTarget = 0;
     [SerializeField] Vector3 m_currentTargetBestPosition;
+    [SerializeField] int m_stock;
 
     public delegate void OnPathChangedDelegate();
     public OnPathChangedDelegate OnPathChanged;
+    public int Stock => m_stock;
 
     public Transform Target
     {
@@ -60,14 +62,15 @@ public class WorkerController : MonoBehaviour
             {
                 if (m_isCarryingItems)
                 {
-                    Debug.Log("TODO: drop elements into the PostController");
+                    m_targets[m_currentTarget].Drop(m_stock);
+                    m_stock = 0;
                 }
                 else
                 {
-                    Debug.Log("TODO: pick elements from the PostController");
+                    m_stock = m_targets[m_currentTarget].Pick(5);
                 }
 
-                //@TODO: wait 1 second
+                yield return new WaitForSeconds(1f);
                 m_isCarryingItems = !m_isCarryingItems;
                 m_currentTarget = (m_currentTarget + 1) % m_targets.Length;
                 Target = m_targets[m_currentTarget].depot;

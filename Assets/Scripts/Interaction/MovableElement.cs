@@ -35,6 +35,7 @@ public class MovableElement : InteractableElement
             if (CheckForOverlap(hitFloor.point))
                 return;
             m_root.transform.position = hitFloor.point;
+            m_root.GetComponent<PostController>()?.UpdateStockUI();
         }
     }
 
