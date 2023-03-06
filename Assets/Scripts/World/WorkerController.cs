@@ -52,6 +52,7 @@ public class WorkerController : MonoBehaviour
     {
         m_currentTarget = 0;
         Target = m_targets[0].depot;
+        m_ui.gameObject.SetActive(true);
         GoToTarget();
         StopCoroutine(DoUpdate());
         StartCoroutine(DoUpdate());
@@ -93,7 +94,7 @@ public class WorkerController : MonoBehaviour
         }
     }
 
-    void RecomputePath()
+    public void RecomputePath()
     {
         if (m_path == null)
         {

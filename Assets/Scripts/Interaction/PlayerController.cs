@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
                 m_currentInteractable.OnInteractableMouseUp(this);
                 EventHistory.instance.AddRelocationEvent(m_currentInteractable.root, m_oldInteractablePosition, m_oldInteractableRotation);
                 m_currentInteractable = null;
+
+                m_activeWorker.RecomputePath();
+                m_activeWorker.GoToTarget();
             }
             
         }

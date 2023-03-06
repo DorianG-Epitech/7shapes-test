@@ -13,6 +13,11 @@ public class PostController : MonoBehaviour
     public Transform depot => m_depot;
     public int Stock => m_stock;
 
+    private void Start()
+    {
+        m_ui.gameObject.SetActive(true);
+    }
+
     public IEnumerator RefillStock()
     {
         m_ui.ResetRadialLoading(1f / m_refillRate);
