@@ -58,7 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f5fddac6ed6f0479257f8c96245794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 4298176179013135190}
+  m_root: {fileID: 4298176179013135190}
+  m_collider: {fileID: 0}
 --- !u!1 &3976099649203862735
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +301,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 13
   m_ObstacleAvoidanceType: 4
 --- !u!114 &5423808232343041027
 MonoBehaviour:
@@ -315,8 +316,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_agent: {fileID: 5423808232343041026}
-  m_previewPath: 0
-  m_targets: []
+  m_previewPath: 1
+  m_targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_isCarryingItems: 0
   m_target: {fileID: 0}
   m_currentTarget: 0
   m_currentTargetBestPosition: {x: 0, y: 0, z: 0}

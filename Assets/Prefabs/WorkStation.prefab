@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1255205760043008177}
   - component: {fileID: 667803145755196481}
   - component: {fileID: 618825356596292873}
+  - component: {fileID: 1067332789}
   m_Layer: 24
-  m_Name: Ignore
+  m_Name: Pickeable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286766623114446431}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.265, z: -0.397}
-  m_LocalScale: {x: 2.9877841, y: 0.52523, z: 1.8028944}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 749360062507003366}
   m_RootOrder: 0
@@ -91,8 +92,26 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.9743137, y: 1, z: 6.0621676}
+  m_Center: {x: 0.010765076, y: 0, z: -1.6891406}
+--- !u!114 &1067332789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286766623114446431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f5fddac6ed6f0479257f8c96245794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_root: {fileID: 5527551442005968286}
+  m_collider: {fileID: 0}
+  m_ignoreColliders:
+  - {fileID: 5005161130356157241}
+  - {fileID: 1589056158263930790}
+  m_isOverlaping: 0
 --- !u!1 &3417293966783345743
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +125,7 @@ GameObject:
   - component: {fileID: 6356030332420494645}
   - component: {fileID: 1589056158263930790}
   - component: {fileID: 5804170214606899351}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: navigation-forbidden (post zone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +202,7 @@ BoxCollider:
   m_GameObject: {fileID: 3417293966783345743}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -401,7 +420,7 @@ GameObject:
   - component: {fileID: 5005161130356157242}
   - component: {fileID: 5005161130356157241}
   - component: {fileID: 5005161130356157240}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: navigation-forbidden (safety zone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +497,7 @@ BoxCollider:
   m_GameObject: {fileID: 5005161130356157246}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -758,7 +777,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5005161130815025626}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
