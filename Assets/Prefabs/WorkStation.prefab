@@ -107,11 +107,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_root: {fileID: 5527551442005968286}
-  m_collider: {fileID: 0}
+  m_collider: {fileID: 618825356596292873}
   m_ignoreColliders:
   - {fileID: 5005161130356157241}
   - {fileID: 1589056158263930790}
-  m_isOverlaping: 0
 --- !u!1 &3417293966783345743
 GameObject:
   m_ObjectHideFlags: 0
