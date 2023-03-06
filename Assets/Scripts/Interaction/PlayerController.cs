@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetMouseButton(0) && m_currentInteractable)
         {
             m_currentInteractable.OnInteractableMouse(this);
+            
+            if (Input.mouseScrollDelta.y != 0f)
+                m_currentInteractable.OnInteractableMouseScroll(this, Input.mouseScrollDelta.y);
         }
         else if (Input.GetMouseButtonUp(0))
         {

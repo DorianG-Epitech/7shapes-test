@@ -19,4 +19,5 @@ public abstract class InteractableElement : MonoBehaviour
     public abstract void OnInteractableMouseDown(PlayerController controller);
     public abstract void OnInteractableMouse(PlayerController controller);
     public abstract void OnInteractableMouseUp(PlayerController controller);
+    public abstract void OnInteractableMouseScroll(PlayerController controller, float scrollDelta);
 }

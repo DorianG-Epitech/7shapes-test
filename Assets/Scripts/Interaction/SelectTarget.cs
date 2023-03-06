@@ -10,7 +10,7 @@ public class SelectTarget : InteractableElement
     {
         if (controller.activeWorker)
         {
-            controller.activeWorker.Target =this.transform;
+            controller.activeWorker.Target = this.transform;
         }
     }
 
@@ -20,6 +20,11 @@ public class SelectTarget : InteractableElement
     }
 
     public override void OnInteractableMouseUp(PlayerController controller)
+    {
+        // do nothing
+    }
+
+    public override void OnInteractableMouseScroll(PlayerController controller, float scrollDelta)
     {
         // do nothing
     }

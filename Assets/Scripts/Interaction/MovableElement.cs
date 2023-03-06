@@ -27,4 +27,10 @@ public class MovableElement : InteractableElement
     {
         // do nothing
     }
+    
+    public override void OnInteractableMouseScroll(PlayerController controller, float scrollDelta)
+    {
+        // do nothing
+        m_root.transform.Rotate(Vector3.up * scrollDelta);
+    }
 }
