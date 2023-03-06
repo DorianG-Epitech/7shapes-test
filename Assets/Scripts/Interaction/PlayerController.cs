@@ -69,8 +69,11 @@ public class PlayerController : MonoBehaviour
                 EventHistory.instance.AddRelocationEvent(m_currentInteractable.root, m_oldInteractablePosition, m_oldInteractableRotation);
                 m_currentInteractable = null;
 
-                m_activeWorker.RecomputePath();
-                m_activeWorker.GoToTarget();
+                if (m_activeWorker.Started)
+                {
+                    m_activeWorker.RecomputePath();
+                    m_activeWorker.GoToTarget();
+                }
             }
             
         }

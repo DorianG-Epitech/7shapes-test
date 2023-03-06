@@ -21,12 +21,14 @@ public class WorkerController : MonoBehaviour
     [SerializeField] int m_currentTarget = 0;
     [SerializeField] Vector3 m_currentTargetBestPosition;
     [SerializeField] int m_stock;
+    [SerializeField] bool m_started;
     [Header("UI")]
     [SerializeField] WorkerUI m_ui;
 
     public delegate void OnPathChangedDelegate();
     public OnPathChangedDelegate OnPathChanged;
     public int Stock => m_stock;
+    public bool Started => m_started;
 
     public Transform Target
     {
@@ -50,6 +52,7 @@ public class WorkerController : MonoBehaviour
 
     public void DoStart()
     {
+        m_started = true;
         m_currentTarget = 0;
         Target = m_targets[0].depot;
         m_ui.gameObject.SetActive(true);
@@ -121,6 +124,7 @@ public class WorkerController : MonoBehaviour
     }
     public void ResetPath()
     {
+        m_started = false;
         StopCoroutine(DoUpdate());
         m_currentTarget = 0;
         m_path = null;
