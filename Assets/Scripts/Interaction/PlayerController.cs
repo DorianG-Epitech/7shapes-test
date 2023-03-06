@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] WorkerController m_activeWorker;
     [Header("Status")]
     [SerializeField] InteractableElement m_currentInteractable = null;
+    [SerializeField] Vector3 m_oldInteractablePosition;
+    [SerializeField] Quaternion m_oldInteractableRotation;
     [SerializeField] private Ray m_mouseRay;
 
     public Ray mouseRay { get => m_mouseRay; private set => m_mouseRay = value; }
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (hitInteractable.collider.TryGetComponent<InteractableElement>(out m_currentInteractable))
                 {
+                    m_oldInteractablePosition = m_currentInteractable.root.transform.position;
+                    m_oldInteractableRotation = m_currentInteractable.root.transform.rotation;
                     m_currentInteractable.OnInteractableMouseDown(this);
 
                     // this is not very elegant, but the alternative implies a larger codebase
@@ -62,6 +66,7 @@ public class PlayerController : MonoBehaviour
             if (m_currentInteractable)
             {
                 m_currentInteractable.OnInteractableMouseUp(this);
+                EventHistory.instance.AddRelocationEvent(m_currentInteractable.root, m_oldInteractablePosition, m_oldInteractableRotation);
                 m_currentInteractable = null;
             }
             

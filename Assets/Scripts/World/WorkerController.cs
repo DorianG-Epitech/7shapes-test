@@ -21,6 +21,8 @@ public class WorkerController : MonoBehaviour
     [SerializeField] int m_currentTarget = 0;
     [SerializeField] Vector3 m_currentTargetBestPosition;
     [SerializeField] int m_stock;
+    [Header("UI")]
+    [SerializeField] WorkerUI m_ui;
 
     public delegate void OnPathChangedDelegate();
     public OnPathChangedDelegate OnPathChanged;
@@ -54,6 +56,12 @@ public class WorkerController : MonoBehaviour
         StopCoroutine(DoUpdate());
         StartCoroutine(DoUpdate());
     }
+
+    public void UpdateStockUI()
+    {
+        m_ui.UpdatePosition();
+    }
+
     IEnumerator DoUpdate()
     {
         while (true)
